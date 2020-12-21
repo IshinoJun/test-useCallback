@@ -17,12 +17,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "preserve"
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "**/*.js",
+    "**/*.js"
   ],
   "exclude": [
     "node_modules"
