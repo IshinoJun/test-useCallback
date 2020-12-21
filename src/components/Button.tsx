@@ -6,8 +6,9 @@ interface Props {
 }
 
 // Titleコンポーネント(子)
-const Button: React.FC<Props> = (props) => {
+const Button: React.FC<Props> = React.memo((props) => {
   const { handleClick, value } = props;
+  // eslint-disable-next-line no-console
   console.log('Button child component', value);
 
   return (
@@ -15,6 +16,6 @@ const Button: React.FC<Props> = (props) => {
       {value}
     </button>
   );
-};
+});
 
 export default Button;

@@ -5,9 +5,9 @@ interface Props {
   countState: number;
 }
 
-// Titleコンポーネント(子)
-const Count: React.FC<Props> = (props) => {
+const Count: React.FC<Props> = React.memo((props) => {
   const { text, countState } = props;
+  // eslint-disable-next-line no-console
   console.log('Count child component', text);
 
   return (
@@ -15,6 +15,6 @@ const Count: React.FC<Props> = (props) => {
       {text}:{countState}
     </p>
   );
-};
+});
 
 export default Count;
